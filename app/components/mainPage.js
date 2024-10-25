@@ -25,6 +25,7 @@ const MainPage = () => {
 
   return (
     <div className="main-container">
+      <h1 className="title">AI Bot Demo</h1>
       <input 
         type="text" 
         value={inputText}

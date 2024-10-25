@@ -7,6 +7,13 @@
     padding: 20px;
     background: #f5f5f5;
   }
+
+  /* Style the title */
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
   
   /* Style the input box */
   .text-input {
@@ -20,17 +27,23 @@
   }
   
   /* Style the button */
-  .btn {
-    background-color: #007D2A;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Style the response text display */
-  .response-text {
+.btn {
+  background-color: #454444; /* Lighter gray background color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Add border-radius property for rounded corners */
+}
+
+/* On hover, change background color */
+.btn:hover {
+  background-color: #999; /* Darker gray background color on hover */
+}
+
+/* Style the response text display */
+.response-text {
     margin-top: 15px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: black;
-  }
+}
