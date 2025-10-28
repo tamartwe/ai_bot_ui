@@ -3,6 +3,11 @@
 import React, { useState } from 'react';
 import './MainPageStyles.css';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
+import 'github-markdown-css/github-markdown.css';
+import 'highlight.js/styles/github.css';
 
 
 const MainPage = () => {
@@ -34,7 +39,13 @@ const MainPage = () => {
         className="text-input" // Apply the 'text-input' class to the input element
       />
       <button onClick={handleButtonClick} className="btn">Send Request</button>
-      {responseText && <div className="response-text">{responseText}</div>}
+      {responseText && (
+        <div className="response-text markdown-body">
+          <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+            {responseText}
+          </ReactMarkdown>
+        </div>
+      )}
     </div>
   );
 };
